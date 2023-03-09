@@ -6,6 +6,8 @@
 //
 //        ERE -> true
 
+import java.util.Objects;
+
 public class ІsPalindrome {
     public static void main(String[] args) {
         String str = "ERE";
@@ -13,6 +15,7 @@ public class ІsPalindrome {
     }
 
     public static boolean isPalindrome(String str){
+        Objects.requireNonNull(str, "String line can not be null");
         int left = 0;
         int right = str.length() - 1;
         while (left < right) {

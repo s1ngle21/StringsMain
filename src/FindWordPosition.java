@@ -7,6 +7,8 @@
 //        Target: pollo
 //        Result: 1
 
+import java.util.Objects;
+
 public class FindWordPosition {
     public static void main(String[] args) {
         String source = "Apollo";
@@ -16,10 +18,8 @@ public class FindWordPosition {
 
 
     public static int findWordPosition(String source, String target) {
-        if (source.contains(target)){
-            return source.indexOf(target.charAt(0));
-        }
-        return -1;
+        Objects.requireNonNull(source, "Source can not be null!");
+        Objects.requireNonNull(target, "Target can not be null!");
+        return source.indexOf(target);
     }
-
 }

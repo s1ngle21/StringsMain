@@ -2,19 +2,21 @@
 // Необхідно обчислити, скільки разів символ зустрічається в переданому рядку
 // і повернути це числове значення.
 
-import java.util.Arrays;
+
+import java.util.Objects;
 
 public class FindSymbolOccurance {
     public static void main(String[] args) {
         String line = "Some line in here";
-        char b = 'e';
-        System.out.println(findSymbolOccurance(line, b));
+        char symbol = 'e';
+        System.out.println(findSymbolOccurance(line, symbol));
     }
 
-    public static int findSymbolOccurance (String line, char b){
+    public static int findSymbolOccurance(String line, char symbol) {
+        Objects.requireNonNull(line, "Line can not be null");
         int count = 0;
-        for (int i = 0; i < line.length(); i++){
-            if (line.charAt(i) == b) {
+        for (int i = 0; i < line.length(); i++) {
+            if (line.charAt(i) == symbol) {
                 count++;
             }
         }
