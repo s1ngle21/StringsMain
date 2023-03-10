@@ -7,7 +7,7 @@ public class StringReverse {
         System.out.println(stringReverse(str));
     }
 
-    public static String stringReverse (String str){
+    public static String stringReverse(String str) {
         Objects.requireNonNull(str, "String line can not be null");
         StringBuilder sb = new StringBuilder(str);
         sb.reverse();
