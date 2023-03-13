@@ -9,6 +9,12 @@ public class GuessWord {
     static Scanner scn;
 
     public static void main(String[] args) {
+        startGuessTheWordGame();
+    }
+
+
+    private static void startGuessTheWordGame() {
+
         String[] words = {"apple", "orange", "lemon",
                 "banana", "apricot", "avocado",
                 "broccoli", "carrot", "cherry",
@@ -27,13 +33,6 @@ public class GuessWord {
         userWord = "";
         answer = "";
         scn = new Scanner(System.in);
-
-        startGuessTheWordGame();
-
-    }
-
-
-    private static void startGuessTheWordGame() {
 
         while (!answer.equals(randomWord)) {
 
